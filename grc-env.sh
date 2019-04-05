@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Run this to fix up environment before running gnuradio-companion.
 export VOLK_GENERIC=1
 #export GR_DONT_LOAD_PREFS=1
