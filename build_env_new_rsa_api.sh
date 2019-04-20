@@ -17,3 +17,11 @@ mkdir -p /opt/lib
 cp RSA_API-0.13.211/libRSA_API.so /opt/lib
 chmod -R 777 /opt/include
 
+cp RSA_API-0.13.211/cyusb.conf /etc/
+
+# Setup the plugdev group
+groupadd plugdev
+usermod -a -G plugdev $(whoami)
+touch /etc/udev/rules.d/Tektronix.rules
+echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="0699", MODE="0666", GROUP="plugdev", ATTR{power/autosuspend}="-1", ATTR{power/control}="on", ATTR{bMaxPower}="500mA"' >> /etc/udev/rules.d/Tektronix.rules
+chmod a+r /etc/udev/rules.d/Tektronix.rules
