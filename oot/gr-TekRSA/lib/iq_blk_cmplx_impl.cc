@@ -416,8 +416,6 @@ void iq_blk_cmplx_impl::set_bl(float in_rec_len)
 	double bw = (double)in_bw;
 	int rec_len = in_rec_len;
 	int dev_id_ctor = in_devid;
-	
-	ippInit();
 
 	//Collect and set all RSA configs
 	bool reboot = false;

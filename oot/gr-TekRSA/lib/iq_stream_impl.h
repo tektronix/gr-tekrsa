@@ -26,7 +26,6 @@
 #include <boost/bind.hpp>
 
 #include <TekRSA/iq_stream.h>
-#include "ipp.h"
 #include "RSA_API.h"
 #include <queue>
 #include <string>

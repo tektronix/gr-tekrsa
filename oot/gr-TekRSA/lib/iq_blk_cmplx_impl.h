@@ -24,7 +24,6 @@
 #include <string>
 
 #include <TekRSA/iq_blk_cmplx.h>
-#include "ipp.h"
 #include "RSA_API.h"
 
 #include <TekRSA/iq_blk_cmplx.h>

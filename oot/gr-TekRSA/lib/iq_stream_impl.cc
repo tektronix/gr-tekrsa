@@ -488,8 +488,6 @@ void iq_stream_impl::set_bw(float in_bw)
 	double bw = (double)in_bw;
 	int rec_len = in_rec_len;
 	int dev_id = in_dev_id;
-	
-	ippInit();
 
 	//Collect and set all RSA configs
 	bool reboot = false;
