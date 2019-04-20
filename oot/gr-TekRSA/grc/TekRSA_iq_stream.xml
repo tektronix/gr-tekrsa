@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<block>
+  <name>Tektronix RSA IQ Stream Source</name>
+  <key>TekRSA_iq_stream</key>
+  <category>Tektronix RSA</category>
+  <import>import TekRSA</import>
+  <make>TekRSA.iq_stream($in_ctrfreq, $in_reflvl, $in_bw, $in_recLen, $in_devid)</make>
+  <callback>set_cf($in_ctrfreq)</callback>
+  <callback>set_rl($in_reflvl)</callback>
+  <callback>set_bw($in_bw)</callback>
+
+  <param>
+    <name>Center Frequency</name>
+    <key>in_ctrfreq</key>
+    <value>1e9</value>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Reference Level</name>
+    <key>in_reflvl</key>
+    <value>0</value>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Acq BW</name>
+    <key>in_bw</key>
+    <value>40e6</value>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Stream Buffer Size</name>
+    <key>in_recLen</key>
+    <value>2000</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Device ID (if known)</name>
+    <key>in_devid</key>
+    <value>0</value>
+    <type>int</type>
+  </param>
+
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>
