@@ -25,3 +25,13 @@ usermod -a -G plugdev $(whoami)
 touch /etc/udev/rules.d/Tektronix.rules
 echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="0699", MODE="0666", GROUP="plugdev", ATTR{power/autosuspend}="-1", ATTR{power/control}="on", ATTR{bMaxPower}="500mA"' >> /etc/udev/rules.d/Tektronix.rules
 chmod a+r /etc/udev/rules.d/Tektronix.rules
+
+# Build the RSA Blocks
+mkdir oot/gr-tekRSA/build
+cd oot/gr-tekRSA/build
+cmake ..
+make
+make install
+cd ../../..
+
+
