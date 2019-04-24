@@ -9,4 +9,10 @@ How to get the GNURadio Companion Tek RSA demo running:
 5. Add the following lines to the grc.conf file:
 	[grc]
 	local_blocks_path = /usr/local/share/gnuradio/grc/blocks/
-6. Run the demo script using the command "sudo ./grc_RSA_demo.sh".
+6. Save the file changes and exit the text editor.
+7. Run the demo script using the command "sudo ./grc_RSA_demo.sh".
+	This should open GNURadio Companion showing a simple setup
+	using the Tek RSA blocks.
+8. Plug the RSA300 into the computer.
+9. In GNURadio Companion, run the setup by clicking Run -> Execute in the toolbar,
+	or by clicking the green triangle.

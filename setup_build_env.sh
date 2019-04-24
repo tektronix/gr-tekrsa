@@ -27,8 +27,8 @@ echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="0699", MODE="0666", GROUP="plugdev", AT
 chmod a+r /etc/udev/rules.d/Tektronix.rules
 
 # Build the RSA Blocks
-mkdir oot/gr-tekRSA/build
-cd oot/gr-tekRSA/build
+mkdir oot/gr-TekRSA/build
+cd oot/gr-TekRSA/build
 cmake ..
 make
 make install
