@@ -49,8 +49,8 @@ udevadm trigger --subsystem-match="usb"
 
 # Build the RSA Blocks
 OLDPWD="$(pwd)"
-mkdir "${script_dir}/oot/gr-TekRSA/build"
-cd "${script_dir}/oot/gr-TekRSA/build"
+mkdir "${script_dir}/gr-TekRSA/build"
+cd "${script_dir}/gr-TekRSA/build"
 cmake ..
 make
 make install

@@ -1,3 +1,3 @@
 export LD_LIBRARY_PATH=/opt/lib
 ldconfig
-gnuradio-companion test.grc
+gnuradio-companion frequency_sink.grc
