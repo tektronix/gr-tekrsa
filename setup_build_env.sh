@@ -10,7 +10,6 @@ script_user="$(pstree -lu -s $$ | sed -n 's/[^(]*(\([^)]*\).*/\1/p')"
 echo "Installing project dependencies"
 apt-get update && \
 apt-get install -y \
-    ssadflkjsdfl
     build-essential \
     cmake \
     doxygen \
