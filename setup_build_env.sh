@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # This script installs gnuradio-companion and its dependencies, as well as the new RSA API
 
@@ -6,8 +7,10 @@ script_dir="$(CDPATH= cd -- $(dirname -- $0) && pwd)"
 script_user="$(pstree -lu -s $$ | sed -n 's/[^(]*(\([^)]*\).*/\1/p')"
 
 # Install gnuradio-companion and its dependencies
+echo "Installing project dependencies"
 apt-get update && \
 apt-get install -y \
+    ssadflkjsdfl
     build-essential \
     cmake \
     doxygen \
@@ -22,6 +25,7 @@ apt-get install -y \
     swig3.0
 
 # Setup the RSA API
+echo "Setting up RSA API"
 mkdir -p "${script_dir}/RSA_API-0.13.211"
 tar xvzf "${script_dir}/RSA_API-0.13.211.tar.gz" -C "${script_dir}/RSA_API-0.13.211"
 
@@ -48,6 +52,7 @@ chmod a+r /etc/udev/rules.d/Tektronix.rules
 udevadm trigger --subsystem-match="usb"
 
 # Build the RSA Blocks
+echo "Building the RSA Blocks"
 OLDPWD="$(pwd)"
 mkdir "${script_dir}/gr-TekRSA/build"
 cd "${script_dir}/gr-TekRSA/build"
@@ -56,3 +61,4 @@ make
 make install
 cd "${OLDPWD}"
 
+echo "Success: Setup complete"

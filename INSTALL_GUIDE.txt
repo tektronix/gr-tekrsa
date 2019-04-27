@@ -1,15 +1,16 @@
 How to get the GNURadio Companion Tek RSA demo running:
 1. Run the command "sudo ./setup_build_env.sh" in the terminal.
 	This script installs many dependencies and is expected to take
-	several minutes.
+	several minutes. You will know the script finished successfully if
+	the last line it prints says "Success: setup complete".
 
-2. When that finishes, reboot the computer.
+2. When that finishes, close the terminal that ran step 1 and open a new terminal.
 
-3. After rebooting, return to the project root directory
+3. In the new terminal, return to the project root directory
 	and enter the command "gnuradio-companion" to verify
 	the base program installed correctly. Then exit GNURadio Companion.
 
-4. In the terminal, enter the command "gedit ~/.gnuradio/grc.conf".
+4. Enter the command "gedit ~/.gnuradio/grc.conf".
 	This will open the file "grc.conf" which will be edited in step 5.
 
 5. Add the following lines to the bottom of the grc.conf file:
