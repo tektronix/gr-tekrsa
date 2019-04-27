@@ -19,8 +19,8 @@ local_blocks_path = /usr/local/share/gnuradio/grc/blocks/
 
 6. Save the file changes and close the file.
 
-7. In the project root directory, run the demo script
-	using the command "sudo ./grc_RSA_demo.sh". 
+7. Run the demo script "grc_RSA_demo.sh" in the "examples" directory.
+	Run it with super-user permission. 
 	This should open GNURadio Companion showing a simple setup
 	using the Tek RSA blocks.
 
