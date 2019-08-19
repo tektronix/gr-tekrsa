@@ -1,6 +1,6 @@
 [![TekMonogram](https://tektronix.github.io/media/tekmonogram.png)](https://github.com/tektronix)
 
-# USB-RSA-gnuradio-module [![Tektronix](https://tektronix.github.io/media/TEK-opensource_badge.svg)](https://github.com/tektronix)
+# USB-RSA-gnuradio-module [![Tektronix](https://tektronix.github.io/media/TEK-opensource_badge.svg)](https://github.com/tektronix) [![CodeFactor](https://www.codefactor.io/repository/github/tektronix/usb-rsa-gnuradio-module-wip/badge)](https://www.codefactor.io/repository/github/tektronix/usb-rsa-gnuradio-module-wip) [![Total alerts](https://img.shields.io/lgtm/alerts/g/tektronix/USB-RSA-gnuradio-module-WIP.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/tektronix/USB-RSA-gnuradio-module-WIP/alerts/)
 
 ## Description
 A gnuradio module for use with the Tektronix USB RSA products.
