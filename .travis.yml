@@ -5,7 +5,6 @@ before_install:
   - sudo apt-get install -y gnuradio
   - sudo ./setup_build_env.sh
   - echo '[grc] \n local_blocks_path = /usr/local/share/gnuradio/grc/blocks/' >> ~/.gnuradio/grc.conf
-  
+
 script:
   - sudo examples/grc_RSA_demo.sh &
-  
