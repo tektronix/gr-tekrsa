@@ -25,6 +25,8 @@ apt-get install -y \
 
 # Setup the RSA API
 echo "Setting up RSA API"
+
+wget https://github.com/tektronix/USB-RSA-gnuradio-module-WIP/releases/download/v0.1.2-alpha/RSA_API-0.13.211.tar.gz
 mkdir -p "${script_dir}/RSA_API-0.13.211"
 tar xvzf "${script_dir}/RSA_API-0.13.211.tar.gz" -C "${script_dir}/RSA_API-0.13.211"
 
