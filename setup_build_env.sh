@@ -60,7 +60,6 @@ cd "${script_dir}/build"
 cmake ..
 make
 make install
-make test
 cd "${OLDPWD}"
 
 echo "Success: Setup complete"
