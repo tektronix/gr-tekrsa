@@ -17,8 +17,10 @@ Come chat with us on slack! [Slack gr-tekrsa Community Sign Up](https://join.sla
 
 ## Install
 How to get the GNURadio Companion Tek RSA demo running:
-1. Run the command `sudo ./setup_build_env.sh` in the terminal.
-	This script installs many dependencies and is expected to take
+
+0. Download the RSA_API.tar.gz file here: [RSA_API.tar.gz](https://github.com/tektronix/USB-RSA-gnuradio-module-WIP/releases/download/v0.1.2-alpha/RSA_API-0.13.211.tar.gz)
+1. Run the command `sudo ./setup_build_env.sh` in the terminal. *Note: Previous step is required for this script to succeed.*
+	- This script installs many dependencies and is expected to take
 	several minutes. You will know the script finished successfully if
 	the last line it prints says "Success: setup complete".
 
