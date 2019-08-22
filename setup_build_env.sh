@@ -57,7 +57,7 @@ echo "Building the RSA Blocks"
 OLDPWD="$(pwd)"
 mkdir "${script_dir}/build"
 cd "${script_dir}/build"
-cmake ..
+cmake ../third_party/cmake/
 make
 make install
 cd "${OLDPWD}"
