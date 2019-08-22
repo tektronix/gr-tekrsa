@@ -27,6 +27,7 @@ If applicable, add screenshots or photos to help explain your problem.
  - OS: [e.g. Ubuntu]
  - Version [e.g. 14.04]
  - Branch [e.g. master]
+ - RSA Model # [e.g. RSA306B]
 
 **Additional context**
 Add any other context about the problem here.
