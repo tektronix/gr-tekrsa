@@ -12,6 +12,9 @@ For more information on the directory structure, check out the wiki: [Structure 
 - Kyle Berndard: [kyleb3522](https://github.com/kyleb3522)
 - David Huddleson [huddlesd](https://github.com/huddlesd)
 
+## Community Forum
+Come chat with us on slack! [Slack gr-tekrsa Community Sign Up](https://join.slack.com/t/gr-tekrsa/shared_invite/enQtNzIyOTg1MDg3MDU5LTkzNjg3ZWIxOWQwMmQ2YjU2OTUxNmNjZmVkZmM2ZTRjYzc5MGUyMjhmMjczYzJkZDVjZDA1YWUzOWQ4MWJlNTE)
+
 ## Install
 How to get the GNURadio Companion Tek RSA demo running:
 1. Run the command `sudo ./setup_build_env.sh` in the terminal.
