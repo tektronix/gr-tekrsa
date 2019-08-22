@@ -20,8 +20,8 @@
 # 
 
 from gnuradio import gr, gr_unittest
-from gnuradio import blocks
-import TekRSA_swig as TekRSA
+from gnuradio import blocks #lgtm [py/unused-import] 
+import TekRSA_swig as TekRSA #lgtm [py/unused-import] 
 
 class qa_iq_blk_cmplx (gr_unittest.TestCase):
 
