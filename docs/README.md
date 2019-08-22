@@ -15,7 +15,7 @@ For more information on the directory structure, check out the wiki: [Structure 
 ## Community Forum
 Come chat with us on slack! [Slack gr-tekrsa Community Sign Up](https://join.slack.com/t/gr-tekrsa/shared_invite/enQtNzIyOTg1MDg3MDU5LTkzNjg3ZWIxOWQwMmQ2YjU2OTUxNmNjZmVkZmM2ZTRjYzc5MGUyMjhmMjczYzJkZDVjZDA1YWUzOWQ4MWJlNTE)
 
-## Install
+## Build and Install
 How to get the GNURadio Companion Tek RSA demo running:
 
 0. Download the RSA_API.tar.gz file here: [RSA_API.tar.gz](https://github.com/tektronix/USB-RSA-gnuradio-module-WIP/releases/download/v0.1.2-alpha/RSA_API-0.13.211.tar.gz)
