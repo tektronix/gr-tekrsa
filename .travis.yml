@@ -13,6 +13,7 @@ before_install:
 install:
   - sudo apt-get install -y gnuradio
   - sudo ./setup_build_env.sh
+  - mkdir .gnuradio
   - touch .gnuradio/grc.conf
   - echo '[grc] \n local_blocks_path = /usr/local/share/gnuradio/grc/blocks/' > .gnuradio/grc.conf
 
