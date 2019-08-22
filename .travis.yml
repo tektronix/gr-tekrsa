@@ -1,7 +1,7 @@
 dist: xenial
 
 notifications:
-  slack: tek-oso-internal:tBStikUyvah8EOPb8QY7VWvS
+  slack: gr-tekrsa:DjrPye5uqPWsHpV2uKE9Axfu
 
 branches:
   only:
