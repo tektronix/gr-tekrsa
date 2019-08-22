@@ -1,0 +1,24 @@
+dist: xenial
+language: python
+python:
+  - "2.7"
+
+notifications:
+  slack: gr-tekrsa:DjrPye5uqPWsHpV2uKE9Axfu
+
+branches:
+  only:
+    - master
+
+before_install:
+  - sudo apt-get update
+
+install:
+  - sudo apt-get install -y gnuradio
+  - sudo ./setup_build_env.sh
+  - mkdir .gnuradio
+  - touch .gnuradio/grc.conf
+  - echo '[grc] \n local_blocks_path = /usr/local/share/gnuradio/grc/blocks/' > .gnuradio/grc.conf
+
+script:
+  - sudo examples/grc_RSA_demo.sh &
