@@ -7,8 +7,6 @@
 import sys
 import getopt
 from string import lower as str_lower
-from defusedxml.minidom import parse
-from defusedxml.minidom import parseString
 from xml.dom import minidom
 from xml.dom import Node
 
@@ -8281,7 +8279,7 @@ class docEmptyType(GeneratedsSuper):
 USAGE_TEXT = """
 Usage: python <Parser>.py [ -s ] <in_xml_file>
 Options:
-    -s        Use the SAX parser, not the defusedom parser.
+    -s        Use the SAX parser, not the minidom parser.
 """
 
 def usage():
@@ -8290,7 +8288,7 @@ def usage():
 
 
 def parse(inFileName):
-    doc = defusedxmnl.parse(inFileName)
+    doc = minidom.parse(inFileName)
     rootNode = doc.documentElement
     rootObj = DoxygenType.factory()
     rootObj.build(rootNode)
@@ -8303,7 +8301,7 @@ def parse(inFileName):
 
 
 def parseString(inString):
-    doc = defusedom.parseString(inString)
+    doc = minidom.parseString(inString)
     rootNode = doc.documentElement
     rootObj = DoxygenType.factory()
     rootObj.build(rootNode)
@@ -8316,7 +8314,7 @@ def parseString(inString):
 
 
 def parseLiteral(inFileName):
-    doc = defusedom.parse(inFileName)
+    doc = minidom.parse(inFileName)
     rootNode = doc.documentElement
     rootObj = DoxygenType.factory()
     rootObj.build(rootNode)
