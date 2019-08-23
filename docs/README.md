@@ -9,7 +9,7 @@ A GNU Radio Module for use with the Tektronix USB RSA products. What is a GNU Ra
 For more information on the directory structure, check out the wiki: [Structure of a module](https://wiki.gnuradio.org/index.php/OutOfTreeModules#Structure_of_a_module)
 
 ## Maintainers
-- Kyle Berndard: [kyleb3522](https://github.com/kyleb3522)
+- Kyle Bernard: [kyleb3522](https://github.com/kyleb3522)
 - David Huddleson [huddlesd](https://github.com/huddlesd)
 
 ## Community Forum
