@@ -61,5 +61,7 @@ cmake ..
 make
 make install
 cd "${OLDPWD}"
+pip install -r docs/requirements.txt
+cat docs/requirements.txt
 
 echo "Success: Setup complete"
