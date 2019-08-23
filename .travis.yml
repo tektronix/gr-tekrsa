@@ -1,7 +1,5 @@
 dist: xenial
 language: python
-python:
-  - "2.7"
 
 notifications:
   slack: gr-tekrsa:DjrPye5uqPWsHpV2uKE9Axfu
