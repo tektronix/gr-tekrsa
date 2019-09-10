@@ -15,6 +15,12 @@ For more information on the directory structure, check out the wiki: [Structure 
 ## Community Forum
 Come chat with us on slack! [Slack gr-tekrsa Community Sign Up](https://join.slack.com/t/gr-tekrsa/shared_invite/enQtNzIyOTg1MDg3MDU5LTkzNjg3ZWIxOWQwMmQ2YjU2OTUxNmNjZmVkZmM2ZTRjYzc5MGUyMjhmMjczYzJkZDVjZDA1YWUzOWQ4MWJlNTE)
 
+## Production Environment
+This project is meant to be eveloped and install on Linux. If you are not running Linux on your computer, you can run a Vagrant instance (A container system) to run linux. A Vagrantfile is provided in this repo. 
+1. Install Vagrant on your Mac/Windows/Linux system [Vagrant Install Instructions](https://www.vagrantup.com/intro/getting-started/install.html)
+2. Run the Vagrantfile in this repo [Vagrant Run Instructions](https://www.vagrantup.com/intro/getting-started/up.html)
+3. Now you have a linux system that has run a script to install the latest version of this code.
+
 ## Build and Install
 How to get the GNURadio Companion Tek RSA demo running:
 
