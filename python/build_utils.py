@@ -26,30 +26,34 @@ import re, os, os.path
 from build_utils_codes import *
 
 
-# set srcdir to the directory that contains Makefile.am
-try:
-    srcdir = os.environ['srcdir']
-except KeyError, e:
-    srcdir = "."
-srcdir = srcdir + '/'
+# get srcdir to the directory that contains Makefile.am
+def get_srcdir():
+    try:
+        srcdir = os.environ['srcdir']
+    except KeyError:
+        srcdir = "."
+    srcdir = srcdir + '/'
+    return srcdir
 
-# set do_makefile to either true or false dependeing on the environment
-try:
-    if os.environ['do_makefile'] == '0':
-        do_makefile = False
-    else:
-        do_makefile = True
-except KeyError, e:
-    do_makefile = False
+# return either true or false dependeing on the environment
+def get_do_makefile():
+    try:
+        if os.environ['do_makefile'] == '0':
+            return False
+        else:
+            return True
+    except KeyError:
+        return False
 
-# set do_sources to either true or false dependeing on the environment
-try:
-    if os.environ['do_sources'] == '0':
-        do_sources = False
-    else:
-        do_sources = True
-except KeyError, e:
-    do_sources = True
+# return either true or false dependeing on the environment
+def get_do_sources():
+    try:
+        if os.environ['do_sources'] == '0':
+            return False
+        else:
+            return True
+    except KeyError:
+       return True
 
 name_dict = {}
 
@@ -61,8 +65,7 @@ def log_output_name (name):
     entry.append (name)
 
 def open_and_log_name (name, dir):
-    global do_sources
-    if do_sources:
+    if get_do_sources():
         f = open (name, dir)
     else:
         f = None
@@ -72,12 +75,11 @@ def open_and_log_name (name, dir):
 def expand_template (d, template_filename, extra = ""):
     '''Given a dictionary D and a TEMPLATE_FILENAME, expand template into output file
     '''
-    global do_sources
     output_extension = extract_extension (template_filename)
     template = open_src (template_filename, 'r')
     output_name = d['NAME'] + extra + '.' + output_extension
     log_output_name (output_name)
-    if do_sources:
+    if get_do_sources():
         output = open (output_name, 'w')
         do_substitution (d, template, output)
         output.close ()
@@ -88,8 +90,7 @@ def output_glue (dirname):
     output_ifile_include (dirname)
 
 def output_makefile_fragment ():
-    global do_makefile
-    if not do_makefile:
+    if not get_do_makefile():
         return
 # overwrite the source, which must be writable; this should have been
 # checked for beforehand in the top-level Makefile.gen.gen .
@@ -101,8 +102,7 @@ def output_makefile_fragment ():
     f.close ()
 
 def output_ifile_include (dirname):
-    global do_sources
-    if do_sources:
+    if get_do_sources():
         f = open ('%s_generated.i' % (dirname,), 'w')
         f.write ('//\n// This file is machine generated.  All edits will be overwritten\n//\n')
         files = name_dict.setdefault ('i', [])
@@ -127,11 +127,11 @@ def extract_extension (template_name):
     # we return everything between the penultimate . and .t
     mo = re.search (r'\.([a-z]+)\.t$', template_name)
     if not mo:
-        raise ValueError, "Incorrectly formed template_name '%s'" % (template_name,)
+        raise ValueError("Incorrectly formed template_name '%s'" % (template_name,))
     return mo.group (1)
 
 def open_src (name, mode):
-    global srcdir
+    srcdir = get_srcdir()
     return open (os.path.join (srcdir, name), mode)
 
 def do_substitution (d, in_file, out_file):
