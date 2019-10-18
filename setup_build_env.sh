@@ -26,7 +26,8 @@ apt-get install -y \
 # Setup the RSA API
 echo "Setting up RSA API"
 
-wget https://github.com/tektronix/USB-RSA-gnuradio-module-WIP/releases/download/v0.1.2-alpha/RSA_API-0.13.211.tar.gz
+# RSA_API not yet available
+wget https://github.com/tektronix/USB-RSA-gnuradio-module-WIP/releases/download/v0.1.2-alpha/RSA_API-0.13.211.tar.gz || true
 if [ -f RSA_API-0.13.211.tar.gz ]
 then
     mkdir -p "${script_dir}/RSA_API-0.13.211"
@@ -41,6 +42,9 @@ then
     chmod -R 777 /opt/lib
 
     cp "${script_dir}/RSA_API-0.13.211/cyusb.conf" /etc
+else
+    echo "Unable to download RSA_API"
+fi
 
     # Setup the plugdev group
     if ! getent group plugdev > /dev/null 2>&1
@@ -65,6 +69,3 @@ then
     cd "${OLDPWD}"
 
     echo "Success: Setup complete"
-else
-    echo "Unable to download RSA_API"
-fi
