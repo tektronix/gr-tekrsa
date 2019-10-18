@@ -1,7 +1,10 @@
 [![TekMonogram](https://tektronix.github.io/media/tekmonogram.png)](https://github.com/tektronix)
 
-# USB-RSA-gnuradio-module
-[![Tektronix](https://tektronix.github.io/media/TEK-opensource_badge.svg)](https://github.com/tektronix) [![CodeFactor](https://www.codefactor.io/repository/github/tektronix/usb-rsa-gnuradio-module-wip/badge)](https://www.codefactor.io/repository/github/tektronix/usb-rsa-gnuradio-module-wip) [![Total alerts](https://img.shields.io/lgtm/alerts/g/tektronix/USB-RSA-gnuradio-module-WIP.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/tektronix/USB-RSA-gnuradio-module-WIP/alerts/) [![Build Status](https://travis-ci.com/tektronix/USB-RSA-gnuradio-module-WIP.svg?branch=master)](https://travis-ci.com/tektronix/USB-RSA-gnuradio-module-WIP)
+# gr-tekrsa
+[![Tektronix](https://tektronix.github.io/media/TEK-opensource_badge.svg)](https://github.com/tektronix) [![CodeFactor](https://www.codefactor.io/repository/github/tektronix/gr-tekrsa/badge)](https://www.codefactor.io/repository/github/tektronix/gr-tekrsa) [![Total alerts](https://img.shields.io/lgtm/alerts/g/tektronix/USB-RSA-gnuradio-module-WIP.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/tektronix/USB-RSA-gnuradio-module-WIP/alerts/) [![Build Status](https://travis-ci.com/tektronix/USB-RSA-gnuradio-module-WIP.svg?branch=master)](https://travis-ci.com/tektronix/USB-RSA-gnuradio-module-WIP)
+
+## Disclaimer
+This project is a work in progress and has not reached a stable v1.0 release yet.
 
 ## Description
 A GNU Radio Module for use with the Tektronix USB RSA products. What is a GNU Radio Module? Check out the community [gnuradio.org](https://www.gnuradio.org/)
